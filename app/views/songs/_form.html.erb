@@ -2,4 +2,9 @@
   <% if @song.errors.any? %>
     <div id="error_explination">
       <h2><%= pluralize(@song.error.count, "error")%> prohibited this song from being saved:</h2>
+
+      <ul>
+        <% @song.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      </ul>
     </div>
