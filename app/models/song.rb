@@ -9,4 +9,8 @@ class Song < ActiveRecord::Base
   validates :release_year, numericality: { less_then: Date.today.year }, if: :released?
   valdates :artist_name, presence: true
   validates :genre, presence: true
+
+  def released?
+    released
+  end
 end
