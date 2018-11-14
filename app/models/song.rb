@@ -5,4 +5,5 @@ class Song < ActiveRecord::Base
     message: "cannot be repeated by the same artist in the same year"
   }
   validates :released, inclusion: { in: [true, false]}
+  
 end
