@@ -1,5 +1,5 @@
 <%= form_for(@song) do |f| %>
   <% if @song.errors.any? %>
     <div id="error_explination">
-      <h2><%= pluralize(@song.error.count, "error")</h2>
+      <h2><%= pluralize(@song.error.count, "error")%> prohibited this song from being saved:</h2>
     </div>
