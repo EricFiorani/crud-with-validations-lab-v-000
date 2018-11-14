@@ -30,6 +30,9 @@ class SongsController < ApplicationController
 
     if @song.update(song_params)
       redirect_to @song
+    else
+      render :edit
+    end
   end
 
   def destroy
